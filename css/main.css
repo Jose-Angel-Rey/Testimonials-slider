@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    background: rgb(47, 47, 47);
+    background: linear-gradient(49deg, rgba(47, 47, 47, 1) 30%, rgba(66, 66, 66, 1) 30%, rgba(78, 78, 78, 1) 70%, rgba(47, 47, 47, 1) 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
