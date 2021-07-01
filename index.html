@@ -8,7 +8,12 @@
     <meta name="description" content="Testimonials slider">
     <meta name="keywords" content="HTML, SCSS, CSS, Javascript, slider">
     <meta name="author" content="Jose Angel Rey">
-    <!-- <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/main.css">
     <title>Testimonials</title>
 </head>
@@ -19,22 +24,31 @@
         <main class="main-content">
             <section class="testimonial">
                 <h1 class="sr-only">Testimonial</h1>
-                <img src="" alt="" class="testimonial__user-photo">
                 <p class="testimonial__content">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto facere animi a! Repudiandae omnis
-                    dolorem nihil perspiciatis, dolor accusantium atque.
+                    I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out
+                    chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar
+                    toast everyday carry
                 </p>
                 <div class="testimonial__info-container">
-                    <button class="btn prev-btn"></button>
+                    <img src="./assets/susan.webp" alt="" class="testimonial__user-photo">
+                    <button class="btn prev-btn">
+                        <img src="assets/arrow-left.svg" alt="">
+                    </button>
                     <div class="testimonial__user-info">
-                        <h2 class="testimonial__user-name">David Miller</h2>
-                        <p class="testimonial__user-job">Costumer</p>
+                        <h2 class="testimonial__user-name">
+                            Susan Smith
+                        </h2>
+                        <p class="testimonial__user-job">
+                            Web developer
+                        </p>
                     </div>
-                    <button class="btn next-btn"></button>
+                    <button class="btn next-btn">
+                        <img src="./assets/arrow-right.svg" alt="">
+                    </button>
                 </div>
             </section>
         </main>
-        <footer class="attribution-footer">
+        <footer class="attribution">
             <p> Developed by <a href="https://github.com/Jose-Angel-Rey" target="_blank" rel="noreferrer noopener">Jose
                     Angel Rey</a></p>
         </footer>
