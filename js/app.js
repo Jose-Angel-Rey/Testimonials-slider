@@ -1,5 +1,5 @@
-// local reviews data
-const reviews = [
+// local testimonials data
+const testimonials = [
   {
     id: 1,
     name: "Susan Smith",
@@ -29,3 +29,24 @@ const reviews = [
     text: "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
 ];
+
+// Testimonial items
+const testimonialContent = document.querySelector(".testimonial__content");
+const testimonialPhoto = document.querySelector(".testimonial__user-photo");
+const testimonialName = document.querySelector(".testimonial__user-name");
+const testimonialJob = document.querySelector(".testimonial__user-job");
+
+// Buttons
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+
+let currentItem = 0;
+
+window.addEventListener("DOMContentLoaded", () => {
+  const testimonialReference = testimonials[currentItem];
+
+  testimonialContent.textContent = testimonialReference.text;
+  testimonialPhoto.src = testimonialReference.img;
+  testimonialName.textContent = testimonialReference.name;
+  testimonialJob.textContent = testimonialReference.job;
+});
