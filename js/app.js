@@ -45,36 +45,38 @@ console.log(testimonials.length);
 let currentItem = 0;
 
 window.addEventListener("DOMContentLoaded", () => {
-  nextBtn.addEventListener("click", () => {
-    if (currentItem === testimonials.length - 1) {
-      currentItem = 0;
-      changeInfo(currentItem);
-      console.log(currentItem);
-    } else {
-      currentItem++;
-      changeInfo(currentItem);
-      console.log(currentItem);
-    }
-  });
-  prevBtn.addEventListener("click", () => {
-    if (currentItem === 0) {
-      currentItem = testimonials.length - 1;
-      changeInfo(currentItem);
-      console.log(currentItem);
-    } else {
-      currentItem--;
-      changeInfo(currentItem);
-      console.log(currentItem);
-    }
-  });
+  showTestimonialInfo(currentItem);
 });
 
-function changeInfo(item) {
+// Show testimonial info
+function showTestimonialInfo(item) {
   const testimonialReference = testimonials[item];
   testimonialContent.textContent = testimonialReference.text;
   testimonialPhoto.src = testimonialReference.img;
   testimonialName.textContent = testimonialReference.name;
   testimonialJob.textContent = testimonialReference.job;
 }
-
-// console.log(currentItem)
+// Next button
+nextBtn.addEventListener("click", () => {
+  if (currentItem === testimonials.length - 1) {
+    currentItem = 0;
+    showTestimonialInfo(currentItem);
+    console.log(currentItem);
+  } else {
+    currentItem++;
+    showTestimonialInfo(currentItem);
+    console.log(currentItem);
+  }
+});
+// Prev button
+prevBtn.addEventListener("click", () => {
+  if (currentItem === 0) {
+    currentItem = testimonials.length - 1;
+    showTestimonialInfo(currentItem);
+    console.log(currentItem);
+  } else {
+    currentItem--;
+    showTestimonialInfo(currentItem);
+    console.log(currentItem);
+  }
+});
