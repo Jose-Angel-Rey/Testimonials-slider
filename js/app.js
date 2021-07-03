@@ -1,3 +1,5 @@
+"use strict";
+
 // local testimonials data
 const testimonials = [
   {
@@ -39,14 +41,40 @@ const testimonialJob = document.querySelector(".testimonial__user-job");
 // Buttons
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
-
+console.log(testimonials.length);
 let currentItem = 0;
 
 window.addEventListener("DOMContentLoaded", () => {
-  const testimonialReference = testimonials[currentItem];
+  nextBtn.addEventListener("click", () => {
+    if (currentItem === testimonials.length - 1) {
+      currentItem = 0;
+      changeInfo(currentItem);
+      console.log(currentItem);
+    } else {
+      currentItem++;
+      changeInfo(currentItem);
+      console.log(currentItem);
+    }
+  });
+  prevBtn.addEventListener("click", () => {
+    if (currentItem === 0) {
+      currentItem = testimonials.length - 1;
+      changeInfo(currentItem);
+      console.log(currentItem);
+    } else {
+      currentItem--;
+      changeInfo(currentItem);
+      console.log(currentItem);
+    }
+  });
+});
 
+function changeInfo(item) {
+  const testimonialReference = testimonials[item];
   testimonialContent.textContent = testimonialReference.text;
   testimonialPhoto.src = testimonialReference.img;
   testimonialName.textContent = testimonialReference.name;
   testimonialJob.textContent = testimonialReference.job;
-});
+}
+
+// console.log(currentItem)
