@@ -41,7 +41,7 @@ const testimonialJob = document.querySelector(".testimonial__user-job");
 // Buttons
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
-console.log(testimonials.length);
+
 let currentItem = 0;
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -58,25 +58,17 @@ function showTestimonialInfo(item) {
 }
 // Next button
 nextBtn.addEventListener("click", () => {
-  if (currentItem === testimonials.length - 1) {
+  currentItem++;
+  if (currentItem > testimonials.length - 1) {
     currentItem = 0;
-    showTestimonialInfo(currentItem);
-    console.log(currentItem);
-  } else {
-    currentItem++;
-    showTestimonialInfo(currentItem);
-    console.log(currentItem);
   }
+  showTestimonialInfo(currentItem);
 });
 // Prev button
 prevBtn.addEventListener("click", () => {
-  if (currentItem === 0) {
+  currentItem--;
+  if (currentItem < 0) {
     currentItem = testimonials.length - 1;
-    showTestimonialInfo(currentItem);
-    console.log(currentItem);
-  } else {
-    currentItem--;
-    showTestimonialInfo(currentItem);
-    console.log(currentItem);
   }
+  showTestimonialInfo(currentItem);
 });
