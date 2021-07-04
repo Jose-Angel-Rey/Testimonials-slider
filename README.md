@@ -4,6 +4,8 @@
 
 ---
 
+<img src="./assets/demo.gif" width="100%">
+
 ### Built with
 
 - Semantic HTML5 markup
